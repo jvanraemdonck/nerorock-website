@@ -16,6 +16,10 @@
 </head>
 <body>
 
+  <!-- Full-page side stripes -->
+  <div class="page-stripes__left" aria-hidden="true"></div>
+  <div class="page-stripes__right" aria-hidden="true"></div>
+
   <!-- Edition Banner -->
   <div class="edition-banner">
     30ste editie &nbsp;·&nbsp; 20 september 2026 &nbsp;·&nbsp; Jan Van Ruusbroecpark, Hoeilaart &nbsp;·&nbsp; Gratis toegang
@@ -25,7 +29,13 @@
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo"><img src="img/logo-white.png" alt="Nerorock"></a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="lineup.html">Lineup</a></li>
+      <li class="dropdown">
+        <a href="lineup.html">Lineup ▾</a>
+        <ul class="dropdown__menu">
+          <li><a href="artist-high-hi.html">High Hi</a></li>
+          <li><a href="artist-maksim.html">Maksim</a></li>
+        </ul>
+      </li>
       <li class="dropdown">
         <a href="#">Info ▾</a>
         <ul class="dropdown__menu">
@@ -51,10 +61,12 @@
   <section class="hero">
     <!-- Background slideshow -->
     <div class="hero__slides" aria-hidden="true">
-      <div class="hero__slide active" style="background-image: url('img/hero/hero1.jpg')"></div>
-      <div class="hero__slide" style="background-image: url('img/hero/hero2.jpg')"></div>
-      <div class="hero__slide" style="background-image: url('img/hero/hero3.jpg')"></div>
-      <div class="hero__slide" style="background-image: url('img/hero/hero4.jpg')"></div>
+      <div class="hero__slide active" style="background-image: url('https://drive.google.com/thumbnail?id=1tsU2gOehbeqHxB6hYdMa2zfR219latM3&sz=w1600')"></div>
+      <div class="hero__slide" style="background-image: url('https://drive.google.com/thumbnail?id=1UvucIrS6AuACUDdZaEpGyN0rKND6Qc02&sz=w1600')"></div>
+      <div class="hero__slide" style="background-image: url('https://drive.google.com/thumbnail?id=168n4dvXM8x4H1WeDsOLuiGrh_DlI4YPd&sz=w1600')"></div>
+      <div class="hero__slide" style="background-image: url('https://drive.google.com/thumbnail?id=1qJ_S2Y81jSZB5x88YVxxd1mB65XGvYTZ&sz=w1600')"></div>
+      <div class="hero__slide" style="background-image: url('https://drive.google.com/thumbnail?id=17wrExUvQX39AXdSwyYOv9MDIpVqRX9jn&sz=w1600')"></div>
+      <div class="hero__slide" style="background-image: url('https://drive.google.com/thumbnail?id=1tDR1UiFvPDsnEHWLkcUBL81VRC_6zmkP&sz=w1600')"></div>
     </div>
     <!-- Dark overlay -->
     <div class="hero__overlay" aria-hidden="true"></div>
@@ -74,14 +86,21 @@
   </section>
 
   <!-- Lineup Section -->
-  <section class="section--wide section--alt">
-    <div class="section" style="padding-bottom: 0;">
-      <span class="section__label">Artiesten</span>
-      <h2 class="section__title" style="margin-bottom: 0;">Lineup</h2>
-    </div>
-    <div class="lineup-tba">
-      <p class="lineup-tba__text">Binnenkort<br>bekend</p>
-      <p class="lineup-tba__sub">Volg ons op social media voor de eerste aankondiging</p>
+  <section class="lineup-poster">
+    <div class="lineup-poster__inner">
+      <span class="lineup-poster__label">Artiesten</span>
+      <h2 class="lineup-poster__title">Lineup</h2>
+      <div class="lineup-poster__artists">
+        <a href="artist-high-hi.html" class="artist-poster-row">
+          <span class="artist-poster-row__name">High Hi</span>
+        </a>
+        <a href="artist-maksim.html" class="artist-poster-row">
+          <span class="artist-poster-row__name">Maksim</span>
+        </a>
+      </div>
+      <div class="lineup-poster__cta">
+        <a href="lineup.html" class="lineup-poster__link">Volledige lineup →</a>
+      </div>
     </div>
   </section>
 
@@ -125,29 +144,47 @@
       <h2 class="section__title" style="margin-bottom: 0;">Info</h2>
     </div>
     <div class="info-grid">
-      <a href="bereikbaarheid.html" class="info-card info-card--tile">
-        <img src="img/tiles/bereikbaarheid.avif" alt="Bereikbaarheid">
-        <span class="info-card__arrow">→</span>
+      <a href="bereikbaarheid.html" class="info-card info-card--tile info-card--bg" style="background-image: url('https://drive.google.com/thumbnail?id=1ogy5Sh9p5HvrNzwx1iqtTk9ZhNKAj6RR&sz=w800')">
+        <div class="info-card__bg-zoom"></div>
+        <div class="info-card__text-overlay">
+          <span class="info-card__title">Bereikbaarheid</span>
+          <span class="info-card__arrow">→</span>
+        </div>
       </a>
-      <a href="meer-dan-muziek.html" class="info-card info-card--tile">
-        <img src="img/tiles/meer-dan-muziek.avif" alt="Meer dan muziek">
-        <span class="info-card__arrow">→</span>
+      <a href="meer-dan-muziek.html" class="info-card info-card--tile info-card--bg" style="background-image: url('https://drive.google.com/thumbnail?id=1zb0V8bCwV9rxVGvZIDUUSvxeTVyU4uij&sz=w800')">
+        <div class="info-card__bg-zoom"></div>
+        <div class="info-card__text-overlay">
+          <span class="info-card__title">Meer dan muziek</span>
+          <span class="info-card__arrow">→</span>
+        </div>
       </a>
-      <a href="duurzaam.html" class="info-card info-card--tile">
-        <img src="img/tiles/duurzaam.avif" alt="Duurzaam">
-        <span class="info-card__arrow">→</span>
+      <a href="duurzaam.html" class="info-card info-card--tile info-card--bg" style="background-image: url('https://drive.google.com/thumbnail?id=1ENmc-0sQySOxBEYPQvxfG5aK1cbJaTgK&sz=w800')">
+        <div class="info-card__bg-zoom"></div>
+        <div class="info-card__text-overlay">
+          <span class="info-card__title">Duurzaam</span>
+          <span class="info-card__arrow">→</span>
+        </div>
       </a>
-      <a href="vrijwilliger.html" class="info-card info-card--tile">
-        <img src="img/tiles/vrijwilliger.avif" alt="Vrijwilliger worden">
-        <span class="info-card__arrow">→</span>
+      <a href="vrijwilliger.html" class="info-card info-card--tile info-card--bg" style="background-image: url('https://drive.google.com/thumbnail?id=1VeoZDs8-oU_QDu2mixdMNcVDnSSnqB0r&sz=w800')">
+        <div class="info-card__bg-zoom"></div>
+        <div class="info-card__text-overlay">
+          <span class="info-card__title">Vrijwilliger worden</span>
+          <span class="info-card__arrow">→</span>
+        </div>
       </a>
-      <a href="extra.html" class="info-card info-card--tile">
-        <img src="img/tiles/extra.avif" alt="Extra">
-        <span class="info-card__arrow">→</span>
+      <a href="extra.html" class="info-card info-card--tile info-card--bg" style="background-image: url('https://drive.google.com/thumbnail?id=1DoQHawjFKXAMJM_iAAo1-bizBG6mXH4R&sz=w800')">
+        <div class="info-card__bg-zoom"></div>
+        <div class="info-card__text-overlay">
+          <span class="info-card__title">Extra</span>
+          <span class="info-card__arrow">→</span>
+        </div>
       </a>
-      <a href="fotografie-pers.html" class="info-card info-card--tile">
-        <img src="img/tiles/fotografie-pers.avif" alt="Fotografie &amp; Pers">
-        <span class="info-card__arrow">→</span>
+      <a href="fotografie-pers.html" class="info-card info-card--tile info-card--bg" style="background-image: url('https://drive.google.com/thumbnail?id=10XziBo3DcNGyazwlRG7_RLx-N2eQVRd2&sz=w800')">
+        <div class="info-card__bg-zoom"></div>
+        <div class="info-card__text-overlay">
+          <span class="info-card__title">Fotografie &amp; Pers</span>
+          <span class="info-card__arrow">→</span>
+        </div>
       </a>
     </div>
   </section>

@@ -12,6 +12,9 @@
 </head>
 <body>
 
+  <div class="page-stripes__left" aria-hidden="true"></div>
+  <div class="page-stripes__right" aria-hidden="true"></div>
+
   <div class="edition-banner">
     30ste editie &nbsp;·&nbsp; 20 september 2026 &nbsp;·&nbsp; Jan Van Ruusbroecpark, Hoeilaart &nbsp;·&nbsp; Gratis toegang
   </div>
@@ -19,7 +22,13 @@
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo"><img src="img/logo-white.png" alt="Nerorock"></a>
     <ul class="nav__links" id="navLinks">
-      <li><a href="lineup.html">Lineup</a></li>
+      <li class="dropdown">
+        <a href="lineup.html">Lineup ▾</a>
+        <ul class="dropdown__menu">
+          <li><a href="artist-high-hi.html">High Hi</a></li>
+          <li><a href="artist-maksim.html">Maksim</a></li>
+        </ul>
+      </li>
       <li class="dropdown">
         <a href="#" aria-current="page">Info ▾</a>
         <ul class="dropdown__menu">
@@ -39,12 +48,11 @@
     </button>
   </nav>
 
-    <header class="page-hero page-hero--with-tile">
-    <div>
+  <header class="page-hero page-hero--photo" style="background-image: url('https://drive.google.com/thumbnail?id=1ogy5Sh9p5HvrNzwx1iqtTk9ZhNKAj6RR&sz=w1600')">
+    <div class="page-hero__photo-content">
       <span class="page-hero__label">Praktisch</span>
       <h1 class="page-hero__title">Bereik­baarheid</h1>
     </div>
-    <img src="img/tiles/bereikbaarheid.avif" alt="" class="page-hero__tile" aria-hidden="true">
   </header>
 
   <main class="page-content">
@@ -62,7 +70,7 @@
       <p>Jan Van Ruusbroecpark, Hoeilaart</p>
     </div>
 
-    <h2>MET DE FIIETS</h2>
+    <h2>MET DE FIETS</h2>
     <p>Er zijn ruime (onbewaakte) fietsenstallingen voorzien:</p>
     <ul>
       <li>In het Jan van Ruusbroecpark</li>
