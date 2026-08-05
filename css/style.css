@@ -969,28 +969,30 @@ img {
   background: var(--color-surface);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 4px;
-  padding: 4rem 3rem;
+  padding: 2rem 2.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1.25rem;
 }
 
-.sponsor-placeholder {
-  width: 160px;
-  height: 64px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px dashed rgba(255, 255, 255, 0.15);
+.sponsor-tile {
+  background: #fff;
   border-radius: 3px;
+  padding: 0.85rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-text-dim);
+}
+
+.sponsor-logo {
+  display: block;
+  max-height: var(--logo-h, 40px);
+  max-width: 200px;
+  width: auto;
+  height: auto;
 }
 
 /* =====================
