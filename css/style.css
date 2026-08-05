@@ -443,6 +443,17 @@ img {
   color: #fff;
 }
 
+.page-hero__credit {
+  position: absolute;
+  z-index: 1;
+  right: 2rem;
+  bottom: 0.6rem;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
 /* Page hero with tile image */
 .page-hero.page-hero--with-tile {
   display: flex;
