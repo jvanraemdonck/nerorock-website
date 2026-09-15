@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Duurzaam — Nerorock 2026</title>
-  <meta name="description" content="Nerorock zet in op duurzaamheid. Ontdek hoe wij het milieu respecteren.">
+  <title>Contact — Nerorock 2026</title>
+  <meta name="description" content="Neem contact op met het Nerorock-team.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
@@ -35,11 +35,11 @@
         </ul>
       </li>
       <li class="dropdown">
-        <a href="#" aria-current="page">Info ▾</a>
+        <a href="#">Info ▾</a>
         <ul class="dropdown__menu">
           <li><a href="bereikbaarheid.html">Bereikbaarheid</a></li>
           <li><a href="meer-dan-muziek.html">Meer dan muziek</a></li>
-          <li><a href="duurzaam.html" aria-current="page">Duurzaam</a></li>
+          <li><a href="duurzaam.html">Duurzaam</a></li>
           <li><a href="extra.html">Extra</a></li>
           <li><a href="fotografie-pers.html">Fotografie &amp; Pers</a></li>
         </ul>
@@ -47,36 +47,50 @@
       <li><a href="vrijwilliger.html">Vrijwilliger worden</a></li>
       <li><a href="geschiedenis.html">Geschiedenis</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
     </ul>
     <button class="nav__toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <header class="page-hero page-hero--photo" style="background-image: url('img/page-duurzaam.webp')">
-    <div class="page-hero__photo-content">
-      <span class="page-hero__label">Info</span>
-      <h1 class="page-hero__title">Duurzaam</h1>
-    </div>
+  <header class="page-hero">
+    <span class="page-hero__label">Vraag of bericht</span>
+    <h1 class="page-hero__title">Contact</h1>
   </header>
 
   <main class="page-content">
-    <h2>DUURZAAM FESTIVAL</h2>
-    <p>Nerorock wil graag inspanningen doen om de ecologische 
-      voetafdruk van het festival zo beperkt mogelijk te houden. 
-      Werken aan en denken over duurzaamheid is een langetermijnvisie, 
-      dus gaan we op zoek naar nieuwe, alternatieve en efficiëntere 
-      technologieën. Dit jaar starten we met het gebruik van herbruikbare 
-      wisselbekers.</p>
-    
-    <h2>HOE WERKT DAT?</h2>
-    <p>Bij je eerste aankoop van bier, waters, frisdranken, 
-      zelfs wijn of cava betaal je 1 consumptiebon extra per beker. 
-      De volgende keer dat je drinken bestelt en je beker afgeeft 
-      betaal je enkel de prijs van het drankje. Wanneer je niets 
-      meer wil drinken lever je je beker in aan een bekerpunt. 
-      Je kan hem inruilen voor 1 euro.</p>
+    <h2>NEEM CONTACT OP</h2>
+    <p>Heb je een vraag, opmerking of voorstel voor Nerorock? Stuur ons een bericht via
+      onderstaand formulier of mail rechtstreeks naar
+      <a href="mailto:info.nerorock@gmail.com">info.nerorock@gmail.com</a>. We proberen
+      steeds zo snel mogelijk te antwoorden.</p>
+
+    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="08c4a883-3fa4-4705-b1d0-a30b6c07db11">
+      <input type="hidden" name="subject" value="Nieuw bericht via nerorock.be">
+      <input type="hidden" name="from_name" value="Nerorock website">
+      <input type="checkbox" name="botcheck" class="contact-form__botcheck" tabindex="-1" autocomplete="off">
+
+      <div class="contact-form__row">
+        <label for="name">Naam</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="contact-form__row">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="contact-form__row">
+        <label for="message">Bericht</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--primary">Verstuur bericht</button>
+
+      <p class="contact-form__status" id="contactFormStatus" role="status" aria-live="polite"></p>
+    </form>
   </main>
 
   <footer class="footer">

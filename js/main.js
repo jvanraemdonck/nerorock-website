@@ -78,3 +78,39 @@ if (navToggle && navLinks) {
     }
   });
 }
+
+// Contact form (Web3Forms)
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  const status = document.getElementById('contactFormStatus');
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    status.removeAttribute('data-state');
+    status.textContent = 'Bezig met versturen...';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm)
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        status.setAttribute('data-state', 'success');
+        status.textContent = 'Bedankt! Je bericht is verstuurd.';
+        contactForm.reset();
+      } else {
+        throw new Error(result.message || 'Versturen mislukt');
+      }
+    } catch (err) {
+      status.setAttribute('data-state', 'error');
+      status.textContent = 'Er ging iets mis. Probeer het later opnieuw of mail naar info.nerorock@gmail.com.';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}

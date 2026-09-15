@@ -1231,6 +1231,87 @@ a.artist-poster-row:hover .artist-poster-row__name {
   color: var(--color-accent);
 }
 
+.btn--primary {
+  border: 1px solid var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+.btn--primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =====================
+   Contact form
+   ===================== */
+.contact-form {
+  max-width: 480px;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form__botcheck {
+  display: none;
+}
+
+.contact-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form__row label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}
+
+.contact-form__row input,
+.contact-form__row textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  padding: 0.75rem 1rem;
+  resize: vertical;
+}
+
+.contact-form__row input:focus,
+.contact-form__row textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  border: none;
+}
+
+.contact-form__status {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.contact-form__status[data-state="success"] {
+  color: var(--color-accent);
+}
+
+.contact-form__status[data-state="error"] {
+  color: #e05a4d;
+}
+
 /* =====================
    Responsive
    ===================== */
