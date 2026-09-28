@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerij — Nerorock 2026</title>
+  <meta name="description" content="Foto's van vorige edities van Nerorock in Hoeilaart.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-stripes__left" aria-hidden="true"></div>
+  <div class="page-stripes__right" aria-hidden="true"></div>
+
+  <div class="edition-banner">
+    30ste editie &nbsp;·&nbsp; 20 september 2026 &nbsp;·&nbsp; Jan Van Ruusbroecpark, Hoeilaart &nbsp;·&nbsp; Gratis toegang
+  </div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo"><img src="img/logo-white.png" alt="Nerorock"></a>
+    <ul class="nav__links" id="navLinks">
+      <li class="dropdown">
+        <a href="lineup.html">Lineup ▾</a>
+        <ul class="dropdown__menu">
+          <li><a href="artist-maksim.html">Maksim</a></li>
+          <li><a href="artist-king-hay.html">King Hay</a></li>
+          <li><a href="artist-tin-fingers.html">Tin Fingers</a></li>
+          <li><a href="artist-emmy-darc.html">Emmy d'Arc</a></li>
+          <li><a href="artist-lenny-lenny.html">Lenny Lenny</a></li>
+          <li><a href="artist-high-hi.html">High Hi</a></li>
+          <li><a href="artist-zornik.html">Zornik</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Info ▾</a>
+        <ul class="dropdown__menu">
+          <li><a href="bereikbaarheid.html">Bereikbaarheid</a></li>
+          <li><a href="meer-dan-muziek.html">Meer dan muziek</a></li>
+          <li><a href="duurzaam.html">Duurzaam</a></li>
+          <li><a href="extra.html">Extra</a></li>
+          <li><a href="fotografie-pers.html">Fotografie &amp; Pers</a></li>
+        </ul>
+      </li>
+      <li><a href="vrijwilliger.html">Vrijwilliger worden</a></li>
+      <li><a href="geschiedenis.html">Geschiedenis</a></li>
+      <li><a href="gallery.html" aria-current="page">Galerij</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <header class="page-hero">
+    <span class="page-hero__label">Terugblik</span>
+    <h1 class="page-hero__title">Galerij</h1>
+  </header>
+
+  <main class="gallery">
+    <div class="gallery__years" id="galleryYears" role="tablist" aria-label="Kies een jaar"></div>
+    <div class="gallery__groups" id="galleryGroups" aria-label="Filter op artiest"></div>
+    <p class="gallery__count" id="galleryCount" aria-live="polite"></p>
+    <div class="gallery__grid" id="galleryGrid"></div>
+    <div class="gallery__sentinel" id="gallerySentinel" aria-hidden="true"></div>
+    <noscript><p>Schakel JavaScript in om de foto's te bekijken.</p></noscript>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Sluiten">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Vorige foto">&#8249;</button>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" id="lightboxImg" alt="">
+      <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Volgende foto">&#8250;</button>
+  </div>
+
+  <footer class="footer">
+    <img src="img/logo-white.png" alt="Nerorock" class="footer__logo">
+    <nav class="footer__links" aria-label="Footer navigatie">
+      <a href="bereikbaarheid.html">Bereikbaarheid</a>
+      <a href="vrijwilliger.html">Vrijwilliger worden</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="geschiedenis.html">Geschiedenis</a>
+      <a href="gallery.html">Galerij</a>
+      <a href="fotografie-pers.html">Pers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer__copy">© 2026 Nerorock — Hoeilaart</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery-data.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
