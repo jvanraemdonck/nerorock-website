@@ -88,6 +88,7 @@ def group_for(stem, year):
     label = label.replace('Sfeer, Medewerkers', 'Sfeer & medewerkers')
     label = label.replace('Sfeer - Kindernamiddag', 'Kindernamiddag')
     label = label.replace('Vive La F-ête', 'Vive La Fête')
+    label = label.replace('Emmy D_Arc', 'Emmy D\'arc')
     return label
 
 
